@@ -1,8 +1,7 @@
 {
   "name": "strapi-provider-upload-uploadcare",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Uploadcare provider for strapi upload",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
