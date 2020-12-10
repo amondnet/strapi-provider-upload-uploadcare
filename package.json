@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-uploadcare",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Uploadcare provider for strapi upload",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
