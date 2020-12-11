@@ -17,11 +17,23 @@ module.exports = ({ env }) => ({
     provider: 'uploadcare',
     providerOptions: {
       public_key: env('UPLOADCARE_PUBLIC_KEY'),
+      // secret_key: env('UPLOADCARE_SECRET_KEY'),
+      // base_cdn: env('UPLOADCARE_BASE_CDN'),
     },
   },
   // ...
 });
 ```
+
+https://github.com/uploadcare/uploadcare-upload-client#settings
+
+`public_key: string`
+The main use of a `public_key` is to identify a target project for your uploads. It is required when using Upload API.
+
+`base_cdn: string`
+Defines your schema and CDN domain. Can be changed to one of the predefined values (https://ucarecdn.com/) or your custom CNAME.
+
+Defaults to `https://ucarecdn.com/`.
 
 ## Resources
 
