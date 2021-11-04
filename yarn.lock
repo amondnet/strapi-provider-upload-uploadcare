@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@uploadcare/upload-client@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@uploadcare/upload-client/-/upload-client-1.1.2.tgz#8de5ff3d5cf570210dcd2844d3af89fc2394319c"
-  integrity sha512-czdafwUQ/sMiEV7B9Pgvf8owQf9yo/2BmVmvPxjvuxngbs24mTB4u5YyXEpSvV55s7+eO1DxTOF0ntWg8S6+VA==
+"@uploadcare/upload-client@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@uploadcare/upload-client/-/upload-client-1.1.5.tgz#ebbafe58dc115dca46320d82c1193b32778e3a9c"
+  integrity sha512-ifQp3isX+PP6xO+Gh5AT0nvdY2y3eDvY1nDvAsIX+hmbGu7UUT3yfGVXXWqthzWl3RxgaESDw06oGtYfpyRMLA==
   dependencies:
     form-data "^3.0.0"
     ws "^7.2.1"

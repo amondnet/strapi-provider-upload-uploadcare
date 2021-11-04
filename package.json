@@ -19,11 +19,11 @@
   },
   "main": "./lib",
   "dependencies": {
-    "@uploadcare/upload-client": "^1.1.2",
+    "@uploadcare/upload-client": "^1.1.5",
     "axios": "^0.21.0"
   },
   "peerDependencies": {
-    "strapi-plugin-upload": "^3.1.6"
+    "strapi-plugin-upload": "^3.6.0"
   },
   "strapi": {
     "isProvider": true
