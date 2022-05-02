@@ -14,7 +14,7 @@ See the [using a provider](https://strapi.io/documentation/v3.x/plugins/upload.h
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: 'uploadcare',
+    provider: 'strapi-provider-upload-uploadcare',
     providerOptions: {
       public_key: env('UPLOADCARE_PUBLIC_KEY'),
       // secret_key: env('UPLOADCARE_SECRET_KEY'),
