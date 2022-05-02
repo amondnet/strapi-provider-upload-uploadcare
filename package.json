@@ -20,7 +20,8 @@
   "main": "./lib",
   "dependencies": {
     "@uploadcare/upload-client": "^1.1.5",
-    "axios": "^0.21.0"
+    "axios": "^0.21.0",
+    "strapi-plugin-upload": "^3.6.9"
   },
   "peerDependencies": {
     "strapi-plugin-upload": "^3.6.0"
