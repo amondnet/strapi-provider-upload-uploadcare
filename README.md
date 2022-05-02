@@ -14,7 +14,7 @@ See the [using a provider](https://strapi.io/documentation/v3.x/plugins/upload.h
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: 'uploadcare',
+    provider: 'strapi-provider-upload-uploadcare',
     providerOptions: {
       public_key: env('UPLOADCARE_PUBLIC_KEY'),
       // secret_key: env('UPLOADCARE_SECRET_KEY'),
@@ -34,6 +34,40 @@ The main use of a `public_key` is to identify a target project for your uploads.
 Defines your schema and CDN domain. Can be changed to one of the predefined values (https://ucarecdn.com/) or your custom CNAME.
 
 Defaults to `https://ucarecdn.com/`.
+
+### Middleware Update
+We must tweak security settings to allow media files coming from UploadCare.
+Create a new file `config/middlewares.js` and set the following:
+
+```js
+module.exports = [
+  "strapi::errors",
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "ucarecdn.com"],
+          "media-src": ["'self'", "data:", "blob:", "ucarecdn.com"],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  'strapi::session',
+  "strapi::favicon",
+  "strapi::public",
+];
+```
+
+> Feel free to change the `src` url based on your CDN url
 
 ## Resources
 
